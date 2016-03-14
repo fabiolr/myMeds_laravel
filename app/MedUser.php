@@ -17,5 +17,3 @@ class MedUser extends Model
 }
 
 
-}
-
