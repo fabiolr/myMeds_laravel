@@ -8,10 +8,9 @@ use App\Http\Requests;
 
 class DashController extends Controller
 {
-	rose
-    	    public function index()
-	    {
-	        return view('dash');
-	    }
+	public function index()
+	{
+		return view('pages.dash');
+	}
 
 }

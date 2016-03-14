@@ -14,8 +14,9 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', 'HomeController@index');
-Route::get('home', 'HomeController@index');
+Route::get('/', 'HomeController@about');
+Route::get('home', 'HomeController@home');
+Route::get('about', 'HomeController@about');
 
 
 /*
@@ -37,10 +38,20 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('meds', 'MedsController@index');
 	Route::get('meds/{med}', 'MedsController@show');
 	Route::get('meds/add', 'MedsController@add'); // form to fill and add med
-	Route::get('meds/{med}/edit', 'MedsController@edit'); // form to fill and add med
+	Route::get('meds/{med}/edit', 'MedsController@edit'); 
 	Route::post('meds', 'MedsController@store');
 	Route::patch('meds/{med}', 'MedsController@update'); 
 	Route::delete('meds/{med}', 'MedsController@delete'); 
+	Route::post('meds/newtype', 'MedsController@newType'); 
+	Route::post('meds/newuse', 'MedsController@newUse'); 
+	Route::get('uses', 'MedsController@uses'); 
+
+
+	Route::get('mymeds', 'MyMedsController@index');
+	Route::get('plus/{mymed}', 'MyMedsController@plus'); 
+	Route::get('minus/{mymed}', 'MyMedsController@minus'); 
+	Route::get('meds/{med}/add', 'MyMedsController@addMyMeds'); 
+	Route::post('meds/{med}', 'MyMedsController@storeMyMeds'); 
 
 
 });

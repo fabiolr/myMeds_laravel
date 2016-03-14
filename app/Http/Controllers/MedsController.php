@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Med;
 use App\Type;
-
+use App\MedUse;
+use Auth;
 
 class MedsController extends Controller
 {
@@ -25,6 +26,10 @@ class MedsController extends Controller
 
 		public function show(Med $med) {
 
+			$med->load('uses.user.meds');
+			
+
+
 			return view ('meds.show', compact('med'));
 
 		}
@@ -32,7 +37,7 @@ class MedsController extends Controller
 		public function store(Request $request, Med $med) {
 	    
 		    $med->create($request->all());
-		    return back();
+			return redirect('/meds')->with('data',['success','Medication Added']);
 
 	    
 	   	}
@@ -60,6 +65,41 @@ class MedsController extends Controller
 
 		}
 		
-	   	
+
+
+		public function newType(Request $request, Type $type) {
+
+		   	$type->create($request->all());
+			return redirect('/meds')->with('data',['success','New Type Added']);
+
+		}
+		
+
+		public function uses() {
+
+
+			$meds = Med::with('uses', 'users', 'type')->get();
+			return view('meds.uses', compact('meds'));
+
+		}
+
+
+
+		public function newUse(Request $request, MedUse $use) {
+
+		   	$use = new MedUse;
+		   	$use->med_id = $request->med_id;
+		   	$use->user_id = Auth::user()->id;
+		   	$use->use = $request->use; 
+		   	$use->save();
+
+			return back();
+
+		}
+
+
+
+
+
 
 }

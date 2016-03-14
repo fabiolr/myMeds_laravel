@@ -23,4 +23,18 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+        public function meds() {
+
+         return $this->belongsToMany(Med::class)->withPivot('expiration','qty','id');;
+
+        }
+
+        public function uses() {
+
+        return $this->hasMany(MedUse::class);
+
+        }
+
 }
+

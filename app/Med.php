@@ -16,4 +16,20 @@ class Med extends Model
 		}
 
 
+        public function users() {
+
+         return $this->belongsToMany(User::class)->withPivot('expiration','qty','id');
+
+        }
+
+
+        public function uses() {
+
+         return $this->hasMany(MedUse::class);
+
+        }
+
+
     }
+
+  

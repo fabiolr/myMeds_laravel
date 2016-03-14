@@ -33,12 +33,12 @@
               	@foreach ($meds as $med)
 
               		<tr>
-              		 <td> {{$med["name"] }} </td>
-					 <td> {{$med->type["type"]}} </td>
-              		 <td> {{$med["ingredient"]}} </td>
-              		 <td> {{$med["dosage"]}} </td>
+              		 <td> <a href="/meds/{{ $med->id }}">{{ $med->name }}</a> </td>
+					         <td> {{ $med->type->type }} </td>
+              		 <td> {{ $med->ingredient }} </td>
+              		 <td> {{ $med->dosage }} </td>
               		 <td>
-              		 <a href="/meds/{{$med['id']}}/edit">Edit</a>
+              		 <a href="/meds/{{ $med->id }}/edit">Edit</a> | <a href="/meds/{{ $med->id }}/add  ">Add to MyMeds</a>
               		 </td>
 					 </tr>
 
@@ -54,5 +54,6 @@
   <hr>
 
   @include('meds.med_form')
+  @include('meds.type_modal')
  
 @stop

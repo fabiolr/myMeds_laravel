@@ -1,4 +1,7 @@
 
+
+
+
 	<h5>Add New Med</h5>
 	<form action="meds" method="POST">
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -15,11 +18,14 @@
 
 					  	<select  name="type_id" class="form-control" id="sel1">
 					    <option class="form-control">Type</option>
+					    <option class="form-control">--------</option>
 					  
 					    @foreach ($types as $type) 
-							<option class="form-control" value="{{$type->id}}">{{$type->type}}</option>
+						<option class="form-control" value="{{$type->id}}">{{$type->type}}</option>
 					    @endforeach
-			
+						<option class="form-control">--------</option>
+						<option class="form-control">New Type</option>
+
 						</select>
 				    </div>
 				</div>
@@ -41,3 +47,11 @@
 		</div>
 
 	</form>
+
+
+
+
+
+
+
+

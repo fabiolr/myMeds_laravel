@@ -12,16 +12,14 @@
 
     <!-- Bootstrap core CSS -->
     <link href="/js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="/js/bootstrap/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
  
  
+    <script src="/js/jquery/jquery-2.2.0.min.js"></script>
+
     <script  src="/js/empresta.js"></script>
-    <script  src="/js/jquery/jquery-2.2.0.min.js"></script>
-    <script  src="/js/bootstrap/js/bootstrap.min.js"></script>
+    <!--<script  src="/js/jquery/jquery-2.2.0.min.js"></script>-->
+    <!--<script  src="/js/bootstrap/js/bootstrap.min.js"></script>-->
+    <!--<script  src="/js/jquery.maskedinput.js"></script>-->
+
 
   </head>
