@@ -2,10 +2,13 @@
 
 @section('content')
 
+    <script  src="/js/jquery.mask.js"></script>
+
 <script type="text/javascript">
-jQuery(function($){
+  
    $("#date").mask("9999-99-99",{placeholder:"YYYY-MM-DD"});
-});</script>
+
+   </script>
 
 <a href="/meds"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a>
 
