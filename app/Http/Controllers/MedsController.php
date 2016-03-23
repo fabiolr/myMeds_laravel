@@ -27,9 +27,6 @@ class MedsController extends Controller
 		public function show(Med $med) {
 
 			$med->load('uses.user.meds');
-			
-
-
 			return view ('meds.show', compact('med'));
 
 		}

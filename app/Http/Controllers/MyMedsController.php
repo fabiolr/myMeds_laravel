@@ -28,17 +28,11 @@ class MyMedsController extends Controller
 				$interval = $interval->format('%R%a days');
 				$mymeds[$x]['interval'] = $interval;	
 					
-			} 
-
-		
-
+			}
 
 			return view('meds.mymeds', compact('mymeds'));
 
-			// $meds = Med::all();
-			// $types = Type::all();
-			// $active = "meds";
-			// return view('meds.meds', compact('meds'), compact('types'), compact('active'));  
+	
 
 		}
 

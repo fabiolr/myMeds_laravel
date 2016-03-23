@@ -17,12 +17,16 @@
 Route::get('/', 'HomeController@about');
 Route::get('home', 'HomeController@home');
 Route::get('about', 'HomeController@about');
+Route::get('json/meds', 'JsonController@allMeds');
+Route::get('json/types', 'JsonController@allTypes');
+Route::get('json/type/add', 'JsonController@addType');
+Route::get('json/med/add', 'JsonController@addMed');
 
 
 /*
 |--------------------------------------------------------------------------
 | Application Routes
-|--------------------------------------------------------------------------
+|---------------------- ----------------------------------------------------
 |
 | This route group applies the "web" middleware group to every route
 | it contains. The "web" middleware group is defined in your HTTP
