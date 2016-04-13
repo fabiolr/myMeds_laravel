@@ -10,10 +10,7 @@ app.use(bodyParser.json());
 
 app.get('/', function(req, res) {
   console.log(req);
-  res.send('It works!');
-});
 
-app.get(['/facebook', '/instagram'], function(req, res) {
   if (
     req.param('hub.mode') == 'subscribe' &&
     req.param('hub.verify_token') == 'CAAIsNqBHnnkBAJrLBXp4mo9X2fCgDGyO1iu0xFaaXlozZBZB0IHioR1XFLXxClkuHTnUF28CtAdI39gkMr1ijnGfGbZAsZCulPZBFb5JvYgo94qJzaRaIwbtgLdMKWUh0LysXMYR8ccGlCswinZAJ94CEXfd88p7j2fE7JFXqk4JK0SCvoJTOVN1BVQ9zd5cDJ1HKavBE1BQZDZD'
@@ -22,6 +19,11 @@ app.get(['/facebook', '/instagram'], function(req, res) {
   } else {
     res.sendStatus(400);
   }
+
+});
+
+app.get(['/facebook', '/instagram'], function(req, res) {
+  
 });
 
 app.post('/facebook', function(req, res) {
@@ -37,5 +39,21 @@ app.post('/instagram', function(req, res) {
   // Process the Instagram updates here
   res.sendStatus(200);
 });
+
+app.post('/facebook/', function (req, res) {
+  messaging_events = req.body.entry[0].messaging;
+  for (i = 0; i < messaging_events.length; i++) {
+    event = req.body.entry[0].messaging[i];
+    sender = event.sender.id;
+    if (event.message && event.message.text) {
+      text = event.message.text;
+      // Handle a text message from this sender
+    }
+  }
+  res.sendStatus(200);
+});
+
+
+
 
 app.listen();
