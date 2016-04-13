@@ -14,7 +14,7 @@ app.get('/', function(req, res) {
   if (
     req.param('hub.mode') == 'subscribe' &&
     req.param('hub.verify_token') == 'fhnjfdshf89yr3jldkejy3ecejfy32ondkfh03'
-  ) {
+    ) {
     res.send(req.param('hub.challenge'));
   } else {
     res.sendStatus(400);
