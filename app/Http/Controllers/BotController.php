@@ -37,7 +37,7 @@ class BotController extends Controller
 				// handle incoming messages
 			
 				
- 			 $messaging_events = $request->input('req.body.entry[0].messaging');
+ 			 $messaging_events = $request->input('req_body_entry[0]_messaging');
 
 
 					$med = new Med;
