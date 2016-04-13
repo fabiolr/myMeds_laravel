@@ -15,7 +15,7 @@ class BotController extends Controller
 		    	return $request[hub.challenge];
 		    }
 
-		}
+		
 
 		}
 }
