@@ -8,7 +8,7 @@ app.listen(app.get('port'));
 
 app.use(bodyParser.json());
 
-app.get('/facebook', function(req, res) {
+app.get('/bot/facebook', function(req, res) {
   console.log(req);
 
   if (
@@ -24,21 +24,21 @@ app.get('/facebook', function(req, res) {
 
 
 
-app.post('/facebook', function(req, res) {
+app.post('/bot/facebook', function(req, res) {
   console.log('Facebook request body:');
   console.log(req.body);
   // Process the Facebook updates here
   res.sendStatus(200);
 });
 
-app.post('/instagram', function(req, res) {
+app.post('/bot/instagram', function(req, res) {
   console.log('Instagram request body:');
   console.log(req.body);
   // Process the Instagram updates here
   res.sendStatus(200);
 });
 
-app.post('/facebook/', function (req, res) {
+app.post('/bot/facebook/', function (req, res) {
   messaging_events = req.body.entry[0].messaging;
   for (i = 0; i < messaging_events.length; i++) {
     event = req.body.entry[0].messaging[i];
