@@ -21,6 +21,7 @@ Route::get('json/meds', 'JsonController@allMeds');
 Route::get('json/types', 'JsonController@allTypes');
 Route::get('json/type/add', 'JsonController@addType');
 Route::get('json/med/add', 'JsonController@addMed');
+Route::get('medbot/callback', 'BotController@callback');
 
 
 /*

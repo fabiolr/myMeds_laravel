@@ -1,0 +1,614 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ac",
+				"active_ingrediant"
+			],
+			[
+				"med",
+				"med_types"
+			],
+			[
+				"des",
+				"description"
+			],
+			[
+				"active",
+				"active_ingredient"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"wind",
+				"windowHeight"
+			],
+			[
+				"windo",
+				"windowWidth"
+			],
+			[
+				"time",
+				"timeout	setTimeout function"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"Do",
+				"DoZipStuff"
+			],
+			[
+				"Error",
+				"ErrorMsg"
+			],
+			[
+				"tex",
+				"textColorHex"
+			],
+			[
+				"te",
+				"text"
+			],
+			[
+				"cu",
+				"currentWeather"
+			],
+			[
+				"weat",
+				"weatherID"
+			],
+			[
+				"his",
+				"historicalLowAvg"
+			],
+			[
+				"historicallo",
+				"historicalLowMin"
+			],
+			[
+				"historicalH",
+				"historicalHighMax"
+			],
+			[
+				"cur",
+				"currentCase"
+			],
+			[
+				"ge",
+				"getHours"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"p",
+				"p5"
+			],
+			[
+				"g",
+				"gauge"
+			],
+			[
+				"tod",
+				"today"
+			],
+			[
+				"sp",
+				"speedSlider"
+			],
+			[
+				"cre",
+				"createSlider"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"spe",
+				"speedShoot"
+			],
+			[
+				"v",
+				"vertical-align"
+			],
+			[
+				"max-",
+				"max-height"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"bo",
+				"bower_components"
+			],
+			[
+				"norm",
+				"normalTemp"
+			],
+			[
+				"noral",
+				"normalTemp"
+			],
+			[
+				"Pur",
+				"PurseY"
+			],
+			[
+				"Poss",
+				"PossibleY"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"font",
+				"font-variant"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 67.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Snippet: ",
+				"Snippet: html"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/fabio/Dropbox (SPH)/UM/BTE524/fbs",
+		"/Users/fabio/Dropbox (SPH)/UM/BTE524/socket.io-client-swift-example",
+		"/Users/fabio/Dropbox (SPH)/UM/BTE524/socket.io-client-swift-example/server"
+	],
+	"file_history":
+	[
+		"/Users/fabio/Dropbox (SPH)/UM/BTE524/fbs/app.json",
+		"/Users/fabio/Dropbox (SPH)/UM/BTE524/fbs/index.html",
+		"/Users/fabio/Dropbox (SPH)/UM/BTE524/fbs/index.js",
+		"/Users/fabio/Dropbox (SPH)/UM/BTE524/fbs/package.json",
+		"/Users/fabio/Dropbox (SPH)/UM/BTE524/fbs/app.js",
+		"/Users/fabio/Dropbox (SPH)/UM/BTE524/battleshipServerSide/index.html",
+		"/Users/fabio/Dropbox (SPH)/UM/BTE524/battleshipServerSide/package.json",
+		"/Users/fabio/Dropbox (SPH)/UM/BTE524/battleshipServerSide/index.js",
+		"/Users/fabio/Dropbox (SPH)/UM/BTE524/battleshipServerSide/app.js",
+		"/Users/fabio/Dropbox (SPH)/UM/BTE524/battleshipServerSide/Procfile",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/readme.md",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/config/database.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/app/Http/routes.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/meds/meds.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/meds/uses.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/app/Http/Controllers/MedsController.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/meds/mymeds.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/meds/use_form.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/meds/show.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/app/MedUse.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/common/nav.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/app/MedUser.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/meds/edit_mymed.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/public/js/jquery.mask.js",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/meds/type_modal.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/meds/med_form.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/database/migrations/2016_03_14_142601_create_uses_table.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/app/Use.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/database/migrations/2016_03_14_144354_create_uses_table.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/app/Type.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/database/migrations/2016_03_14_150149_create_med_uses_table.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/app/Med.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/app/User.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/app/Http/Controllers/MyMedsController.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/common/foot.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/common/head.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/app/Http/Controllers/Auth/AuthController.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/common/main_not_logged.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/common/nav_not_logged.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/auth/login.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/auth/register.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/home.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/app/Http/Controllers/HomeController.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/layouts/app.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/meds/meds2.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/app/Http/Middleware/RedirectIfAuthenticated.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/config/app.php",
+		"/Users/fabio/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/fabio/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/fabio/Library/Application Support/Sublime Text 2/Packages/User/fabios.sublime-snippet",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/database/migrations/2016_03_07_194528_make_meds_table.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/database/migrations/2016_03_07_205656_create_types_table.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/welcome.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/meds/resources/views/common/main.blade.php",
+		"/Users/fabio/pcomp/pcomp.sublime-project",
+		"/Users/fabio/pcomp/mypcomp/js/driver_serial",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/app/Friendships.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/app/MedTypes.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/app/MyMeds.php",
+		"/Users/fabio/pcomp/pcomp-server/public/js/lib/ibis-driver-game2.js",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/app/Treatments.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/app/Http/Controllers/TreatmentsController.php",
+		"/Users/fabio/pcomp/pcomp-server/views/_layout.html",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/resources/views/treatments/treatments.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/app/Http/routes.php",
+		"/Users/fabio/pcomp/mypcomp/js/driver_serial.js",
+		"/Users/fabio/pcomp/pcomp-server/public/js/lib/ibis-driver-game.js",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/database/migrations/2016_02_22_184113_Meds.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/app/User.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/database/migrations/2016_02_22_184154_Treatments.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/app/Symptoms.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/app/Meds.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/resources/views/meds/meds.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/app/Http/Controllers/MyMedsController.php",
+		"/Users/fabio/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/resources/views/head.blade.php",
+		"/Users/fabio/www/myMeds/dashboard.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/resources/views/nav.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/resources/views/main.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/resources/views/head.blade.html",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/resources/views/foot.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/resources/views/frontend/meds.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/app/Users.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/resources/views/frontend/main.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/database/migrations/2016_02_22_184122_MyMeds.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/resources/views/frontend/hello.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/vendor/symfony/routing/Router.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/database/migrations/2016_02_22_184204_Friendships.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/database/migrations/2016_02_22_184131_Symptoms.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/database/migrations/2014_10_12_100000_create_password_resets_table.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/database/migrations/2016_02_23_003824_MedTypes.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/config/app.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/resources/views/welcome.blade.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/app/Http/Controllers/MyController.php",
+		"/Users/fabio/Dropbox (SPH)/UM/LaravelCode/laravel/resources/views/hello.blade.php",
+		"/Users/fabio/www/empresta.miami/logout.php",
+		"/Users/fabio/www/empresta.miami/database.php",
+		"/Users/fabio/www/empresta.miami/empresta.js",
+		"/Users/fabio/www/empresta.miami/empresta.miami_schema_1.0.png",
+		"/Users/fabio/www/empresta.miami/empresta.sql",
+		"/Users/fabio/www/empresta.miami/register.php",
+		"/Users/fabio/www/empresta.miami/set.php",
+		"/Users/fabio/www/empresta.miami/ses.php",
+		"/Users/fabio/www/empresta.miami/test.php",
+		"/Users/fabio/Downloads/quiz_creator/new_answer.php",
+		"/Users/fabio/www/empresta.miami/check_login.php",
+		"/Users/fabio/Dropbox (SPH)/NOVO (Fabio)/Site/admin/editcontatos.php",
+		"/Users/fabio/Dropbox (SPH)/NOVO (Fabio)/Site/admin/menu.php",
+		"/Users/fabio/www/empresta.miami/index.php",
+		"/Users/fabio/Dropbox (SPH)/NOVO (Fabio)/Site/admin/checklogin.php",
+		"/Users/fabio/Downloads/quiz_creator/new_question.php",
+		"/Users/fabio/www/queso/610.html",
+		"/Users/fabio/www/queso/index.html",
+		"/Users/fabio/www/queso/620.html",
+		"/Users/fabio/www/queso/630.html",
+		"/Users/fabio/www/queso/style.css",
+		"/Users/fabio/www/queso/600.html",
+		"/Users/fabio/www/fabio.miami/wp-content/themes/portfolio/process.php",
+		"/Users/fabio/www/fabio.miami/wp-content/themes/portfolio/assets/scss/foundation.scss",
+		"/Users/fabio/www/fabio.miami/wp-content/themes/portfolio/index.php",
+		"/Users/fabio/Downloads/ai2html-output/class.html",
+		"/Users/fabio/Downloads/ai2html-output/Queso-(new-redesign)-2.html",
+		"/Users/fabio/www/cc/p5/collision/sketch.js",
+		"/Users/fabio/www/cc/p5/collision/index.html",
+		"/Users/fabio/Downloads/Children/index.html",
+		"/Users/fabio/www/cc/aircraft/faware_ex.html",
+		"/Users/fabio/www/cc/aircraft/js/sketch.js"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			"/Users/fabio/Dropbox (SPH)/UM/meds",
+			"/Users/fabio/pcomp",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"chat message",
+			"sendchat",
+			"name",
+			"msg",
+			"mag",
+			"id",
+			"type",
+			"meds",
+			"login\n",
+			"redirect\n",
+			"login\n",
+			"/login\n",
+			"\n",
+			"@include('meds.use_form')\n",
+			"Uses",
+			"addType",
+			"login",
+			"auth",
+			"Auth",
+			"hidden",
+			"DB_DATABASE",
+			"_hornSound",
+			"horn",
+			"_crashSound",
+			"crashSound",
+			"Sound",
+			"sound",
+			"_crashSound",
+			"_motorSound",
+			"ibis-driver-game",
+			"button",
+			"side",
+			"meds",
+			"_session",
+			"new_med",
+			"public",
+			";\n",
+			"empresta.js",
+			"bootstrap",
+			"<script  src=\"empresta.js\"></script>",
+			"modal",
+			"button",
+			"Symptons",
+			"<a href=\"symps.php\">Symptons</a>",
+			"Empresta Miami",
+			"Empresta em Miami",
+			"have",
+			"I Have",
+			"description",
+			"new_sym",
+			"hidden",
+			"\\$syms",
+			"$syms",
+			"\"sims\"",
+			"\\$syms",
+			"$syms",
+			"$selfs",
+			"New ",
+			"New Sym",
+			"syms",
+			"get",
+			"del",
+			"thius",
+			"have",
+			"med_id",
+			"new_sym",
+			"New",
+			"new",
+			"new sym",
+			"add",
+			"have",
+			"med_id",
+			"type",
+			"active_ingredient",
+			"new_med",
+			"have",
+			"form",
+			"erro",
+			"error",
+			"alert",
+			"form",
+			"\\=\\=",
+			"==",
+			"href\\=\\=",
+			"\"href==\"",
+			"href==",
+			"a href src",
+			"a href src\\=",
+			"a href src=",
+			"a href src",
+			"a src",
+			"cim 600",
+			"cim600",
+			"g-aiPstyle2",
+			"class=\"g-aiPstyle2\"",
+			"aiPtransformed",
+			"aiImg",
+			"aiAbs",
+			"xxx",
+			".ong",
+			"aiPstyle3",
+			"graded",
+			"clay",
+			"FlightInfoExStruct",
+			"open",
+			"USE",
+			"USE LOW",
+			"sorry",
+			"des",
+			"zip",
+			"#zip",
+			"input",
+			"zip",
+			"reveal",
+			"historicalLowAvg",
+			"currTemp",
+			"settings",
+			"GetWeather",
+			"location",
+			"oBgColor",
+			"color",
+			"bgcolor",
+			"enjoy",
+			"locals",
+			"tempFactor",
+			"cookies",
+			"img",
+			"GetHistory"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Treatments",
+			"<a href=\"symps.php\">Treatments</a>",
+			"myMeds",
+			"=",
+			"href=",
+			"a href=",
+			"a href",
+			"a href src"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "battleship.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"welcome",
+				"meds/resources/views/welcome.blade.php"
+			],
+			[
+				"router",
+				"laravel/vendor/symfony/routing/Router.php"
+			],
+			[
+				"routes.",
+				"laravel/app/Http/routes.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 317.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
