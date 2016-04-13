@@ -20,4 +20,14 @@ class BotController extends Controller
 			return 'wrong token';
 
 		}
+
+				public function bot(Request $request) {    
+
+			
+
+		  		return view('bot.home');
+		}
+
+
+
 }
