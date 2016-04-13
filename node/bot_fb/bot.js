@@ -34,6 +34,24 @@ app.post('/bot/facebook', function(req, res) {
 
 
   // Process the Facebook updates here
+
+   messaging_events = req.body.entry[0].messaging;
+  for (i = 0; i < messaging_events.length; i++) {
+    event = req.body.entry[0].messaging[i];
+    sender = event.sender.id;
+    if (event.message && event.message.text) {
+      text = event.message.text;
+      console.log(text);
+
+      // Handle a text message from this sender
+
+
+      sendTextMessage(sender, "Text received, echo: "+ text.substring(0, 200));
+
+    }
+  }
+
+
   res.sendStatus(200);
 });
 
@@ -44,29 +62,6 @@ app.post('/bot/instagram', function(req, res) {
   res.sendStatus(200);
 });
 
-app.post('/bot/facebook/', function (req, res) {
-	console.log('got a request for facebook:');
-	console.log(req.body);
-
-  messaging_events = req.body.entry[0].messaging;
-  for (i = 0; i < messaging_events.length; i++) {
-    event = req.body.entry[0].messaging[i];
-    sender = event.sender.id;
-    if (event.message && event.message.text) {
-      text = event.message.text;
-
-
-      // Handle a text message from this sender
-
-
-      sendTextMessage(sender, "Text received, echo: "+ text.substring(0, 200));
-
-
-      
-    }
-  }
-  res.sendStatus(200);
-});
 
 function sendTextMessage(sender, text) {
   messageData = {
