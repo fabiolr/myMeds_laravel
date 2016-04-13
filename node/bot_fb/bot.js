@@ -46,8 +46,8 @@ app.post('/bot/facebook', function(req, res) {
       // Handle a text message from this sender
 
 
-      sendTextMessage(sender, "Text received, echo: "+ text.substring(0, 200));
-
+    //  sendTextMessage(sender, "Text received, echo: "+ text.substring(0, 200));
+  		sendTextMessage(sender, "Text received");
     }
   }
 
@@ -55,12 +55,12 @@ app.post('/bot/facebook', function(req, res) {
   res.sendStatus(200);
 });
 
-app.post('/bot/instagram', function(req, res) {
-  console.log('Instagram request body:');
-  console.log(req.body);
-  // Process the Instagram updates here
-  res.sendStatus(200);
-});
+// app.post('/bot/instagram', function(req, res) {
+//   console.log('Instagram request body:');
+//   console.log(req.body);
+//   // Process the Instagram updates here
+//   res.sendStatus(200);
+// });
 
 
 function sendTextMessage(sender, text) {
