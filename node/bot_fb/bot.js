@@ -8,7 +8,7 @@ app.listen(app.get('port'));
 
 app.use(bodyParser.json());
 
-app.get('/', function(req, res) {
+app.get('/bot', function(req, res) {
   console.log(req);
 
   if (
