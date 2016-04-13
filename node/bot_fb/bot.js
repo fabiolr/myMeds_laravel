@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
 
   if (
     req.param('hub.mode') == 'subscribe' &&
-    req.param('hub.verify_token') == 'CAAIsNqBHnnkBAJrLBXp4mo9X2fCgDGyO1iu0xFaaXlozZBZB0IHioR1XFLXxClkuHTnUF28CtAdI39gkMr1ijnGfGbZAsZCulPZBFb5JvYgo94qJzaRaIwbtgLdMKWUh0LysXMYR8ccGlCswinZAJ94CEXfd88p7j2fE7JFXqk4JK0SCvoJTOVN1BVQ9zd5cDJ1HKavBE1BQZDZD'
+    req.param('hub.verify_token') == 'fhnjfdshf89yr3jldkejy3ecejfy32ondkfh03'
   ) {
     res.send(req.param('hub.challenge'));
   } else {
