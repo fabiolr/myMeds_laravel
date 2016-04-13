@@ -39,18 +39,24 @@ class BotController extends Controller
 				
  			 $messaging_events = $request->input('req.body.entry[0].messaging');
 
-  			for (i = 0; i < count($messaging_events); i++) {
-	    		$event = $request->input('req.body.entry[0].messaging[i]'); 
-	    		$sender = $event->sender->id;
-		    		if ($event->message) {
-		     		 $text = $event->message->text;
-		     		 	
-					$med = new Med;
-				   	$med->name = $text; 
-				   	$med->save();
-				   }
 
-		   }
+					$med = new Med;
+				   	$med->name = $messaging_events; 
+				   	$med->save();
+
+
+  			// for (i = 0; i < count($messaging_events); i++) {
+	    // 		$event = $request->input('req.body.entry[0].messaging[i]'); 
+	    // 		$sender = $event->sender->id;
+		   //  		if ($event->message) {
+		   //   		 $text = $event->message->text;
+		     		 	
+					// $med = new Med;
+				 //   	$med->name = $text; 
+				 //   	$med->save();
+				 //   }
+
+		   // }
 
 		   	// Handle a text message from this sender
    		
