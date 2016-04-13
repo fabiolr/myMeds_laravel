@@ -28,8 +28,8 @@ app.get('/bot/facebook', function(req, res) {
 
 
 app.post('/bot/facebook', function(req, res) {
-  console.log('Facebook request body:');
-  console.log(req.body);
+  // console.log('Facebook request body:');
+  // console.log(req.body);
   
 
 
@@ -41,7 +41,9 @@ app.post('/bot/facebook', function(req, res) {
     sender = event.sender.id;
     if (event.message && event.message.text) {
       text = event.message.text;
-      console.log(text);
+      
+
+     	console.log(text);
 
       // Handle a text message from this sender
 
@@ -82,6 +84,7 @@ function sendTextMessage(sender, text) {
       console.log('Error: ', response.body.error);
     }
   });
+  console.log("sent ");
 }
 
 
