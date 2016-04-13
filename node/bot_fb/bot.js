@@ -8,7 +8,7 @@ app.listen(app.get('port'));
 
 app.use(bodyParser.json());
 
-app.get('/bot', function(req, res) {
+app.get('/facebook', function(req, res) {
   console.log(req);
 
   if (
@@ -22,9 +22,7 @@ app.get('/bot', function(req, res) {
 
 });
 
-app.get(['/facebook', '/instagram'], function(req, res) {
-  
-});
+
 
 app.post('/facebook', function(req, res) {
   console.log('Facebook request body:');
