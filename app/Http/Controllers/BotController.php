@@ -8,9 +8,14 @@ use App\Http\Requests;
 
 class BotController extends Controller
 {
-		public function callback() {
+		public function callback(Request $request) {
+		    
+		    if ($request[hub.verify_token] == 'Oquc1jcCyHOw3TQtZBOJYt3TcO') {
 
-			return 'ok';  
+		    	return $request[hub.challenge];
+		    }
+
+		}
 
 		}
 }
