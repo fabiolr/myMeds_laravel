@@ -17,7 +17,7 @@ class BotController extends Controller
 		   			 return $request->input('hub_challenge');
 		    }
 
-		
+			return 'wrong token';
 
 		}
 }
