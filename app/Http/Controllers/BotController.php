@@ -10,7 +10,7 @@ class BotController extends Controller
 {
 		public function callback(Request $request) {    
 
-		    return $request->["hub.challenge"];
+		    return Input::get('hub.challenge');
 
 		    // if ($request["hub.verify_token"] == "Oquc1jcCyHOw3TQtZBOJYt3TcO") {
 
