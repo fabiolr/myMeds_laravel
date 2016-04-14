@@ -1,7 +1,11 @@
 
-var token = "CAAIsNqBHnnkBAPzfc9krR6V6ZB0X81ZCr56nLakZAOD3wyTpTMhYBLZA7XePyMxRG8O3laI1DCuPkrGcSdWzzq3VZCGvzynBGQIUiAxk1Bpcp1z5jC0J4XmH2CwhnNaTZAYZCeXvZABFsZCSZAzZBv0rDT8sFBONYHFezZBeDsynLBbGebr9zRaxPrAKXPCVDZCYkDVlNjRJclAiiHQZDZD";
-var wit = require('node-wit');
-var ACCESS_TOKEN = "MD3ZNDB5MEGX7KLS7Y24FGQBJXBOFQWO";
+const fb_token = "CAAIsNqBHnnkBAPzfc9krR6V6ZB0X81ZCr56nLakZAOD3wyTpTMhYBLZA7XePyMxRG8O3laI1DCuPkrGcSdWzzq3VZCGvzynBGQIUiAxk1Bpcp1z5jC0J4XmH2CwhnNaTZAYZCeXvZABFsZCSZAzZBv0rDT8sFBONYHFezZBeDsynLBbGebr9zRaxPrAKXPCVDZCYkDVlNjRJclAiiHQZDZD";
+const wit_token = "MD3ZNDB5MEGX7KLS7Y24FGQBJXBOFQWO";
+const Wit = require('node-wit').Wit;
+const client = new Wit(token, actions);
+const Logger = require('node-wit').Logger;
+const levels = require('node-wit').logLevels;
+const logger = new Logger(levels.DEBUG);
 
 
 
@@ -90,7 +94,7 @@ function respondToUser(sender, msg) {
   }
   request({
     url: 'https://graph.facebook.com/v2.6/me/messages',
-    qs: {access_token:token},
+    qs: {access_token:fb_token},
     method: 'POST',
     json: {
       recipient: {id:sender},
