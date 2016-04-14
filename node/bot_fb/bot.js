@@ -7,6 +7,7 @@ const Logger = require('node-wit').Logger;
 const levels = require('node-wit').logLevels;
 const logger = new Logger(levels.DEBUG);
 var context = {};
+var sessions = {};
 
 const actions = {
   say: (sessionId, msg, cb) => {
@@ -20,7 +21,6 @@ const actions = {
     console.log('Oops, I don\'t know what to do.');
   },
 };
-
 
 
 var bodyParser = require('body-parser');
