@@ -54,16 +54,7 @@ app.post('/bot/facebook', function(req, res) {
       
      	// console.log(text);
 
-	client.message(text, (error, data) => {
-  if (error) {
-    console.log('Oops! Got an error: ' + error);
-  } else {
-    console.log('Yay, got Wit.ai response: ' + JSON.stringify(data));
-  }
-});
-
-
-
+	
 	//respondToUser(sender, res);
 
 
