@@ -33,7 +33,7 @@ app.post('/bot/facebook', function(req, res) {
 
    messaging_events = req.body.entry[0].messaging;
 
-	//console.log(JSON.stringify(messaging_events));
+	console.log(JSON.stringify(messaging_events));
 
   for (i = 0; i < messaging_events.length; i++) {
     event = req.body.entry[0].messaging[i];
@@ -44,16 +44,12 @@ app.post('/bot/facebook', function(req, res) {
       
      	console.log(text);
 
-      // Handle a text message from this sender
+      	// Handle a text message from this sender
+    	// sendTextMessage(sender, "Text received, echo: "+ text.substring(0, 200));
 
-
-    //  sendTextMessage(sender, "Text received, echo: "+ text.substring(0, 200));
       sendTextMessage(sender, 'responding');
-
     }
-
   }
-
 
   res.sendStatus(200);
 });
