@@ -6,6 +6,7 @@ const client = new Wit(wit_token, actions);
 const Logger = require('node-wit').Logger;
 const levels = require('node-wit').logLevels;
 const logger = new Logger(levels.DEBUG);
+var context = {};
 
 const actions = {
   say: (sessionId, msg, cb) => {
