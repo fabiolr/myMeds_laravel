@@ -1,5 +1,5 @@
 
-var token = "CAAIsNqBHnnkBAIBRUgD5ivRTxuYmHk5ZCmOKtm7Oli1Uk9uKZBZBdScdmuXPSxHqbHIPA1DRatkrZAThST0ADyBVXH07DjDGTA57FcwARv4WyoxMaT9LWlGnRqnz9E8r1y49T67LH5Eb67c7SxkAsrZCkZAZA45J9fspDK7ZCNlxWxBA18lLkkIyP4QcsQMjkxGwElI0JUmdCQZDZD";
+var token = "CAAIsNqBHnnkBAPzfc9krR6V6ZB0X81ZCr56nLakZAOD3wyTpTMhYBLZA7XePyMxRG8O3laI1DCuPkrGcSdWzzq3VZCGvzynBGQIUiAxk1Bpcp1z5jC0J4XmH2CwhnNaTZAYZCeXvZABFsZCSZAzZBv0rDT8sFBONYHFezZBeDsynLBbGebr9zRaxPrAKXPCVDZCYkDVlNjRJclAiiHQZDZD";
 
 
 var bodyParser = require('body-parser');
@@ -48,11 +48,12 @@ app.post('/bot/facebook', function(req, res) {
       	// Handle a text message from this sender
     	// sendTextMessage(sender, "Text received, echo: "+ text.substring(0, 200));
 
-      sendTextMessage(sender, 'responding');
+      // sendTextMessage(sender, 'responding');
     }
   }
 
   res.sendStatus(200);
+
 });
 
 // app.post('/bot/instagram', function(req, res) {
