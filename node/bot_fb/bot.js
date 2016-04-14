@@ -16,10 +16,10 @@ app.get('/bot/facebook', function(req, res) {
   console.log(req);
 
   if (
-    req.params('hub.mode') == 'subscribe' &&
-    req.params('hub.verify_token') == 'fhnjfdshf89yr3jldkejy3ecejfy32ondkfh03'
+    req.param('hub.mode') == 'subscribe' &&
+    req.param('hub.verify_token') == 'fhnjfdshf89yr3jldkejy3ecejfy32ondkfh03'
     ) {
-    res.send(req.params('hub.challenge'));
+    res.send(req.param('hub.challenge'));
   } else {
     res.sendStatus(400);
   }
@@ -46,9 +46,6 @@ app.post('/bot/facebook', function(req, res) {
       
      	console.log(text);
 
-      	// Handle a text message from this sender
-    	// respondToUser(sender, "Text received, echo: "+ text.substring(0, 200));
-
       respondToUser(sender, 'you said ' + text);
     }
   }
@@ -56,13 +53,6 @@ app.post('/bot/facebook', function(req, res) {
   res.sendStatus(200);
 
 });
-
-// app.post('/bot/instagram', function(req, res) {
-//   console.log('Instagram request body:');
-//   console.log(req.body);
-//   // Process the Instagram updates here
-//   res.sendStatus(200);
-// });
 
 
 function respondToUser(sender, msg) {
