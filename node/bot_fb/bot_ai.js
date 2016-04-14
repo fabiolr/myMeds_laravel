@@ -7,13 +7,7 @@
 // const Wit = require('node-wit').Wit;
 const Wit = require('node-wit').Wit;
 
-const token = (() => {
-  if (process.argv.length !== 3) {
-    console.log('usage: node examples/joke.js <wit-token>');
-    process.exit(1);
-  }
-  return process.argv[2];
-})();
+const wit_token = "MD3ZNDB5MEGX7KLS7Y24FGQBJXBOFQWO";
 
 const allJokes = {
   chuck: [
