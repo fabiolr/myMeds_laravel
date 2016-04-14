@@ -7,6 +7,19 @@ const Logger = require('node-wit').Logger;
 const levels = require('node-wit').logLevels;
 const logger = new Logger(levels.DEBUG);
 
+const actions = {
+  say: (sessionId, msg, cb) => {
+    console.log(msg);
+    cb();
+  },
+  merge: (context, entities, cb) => {
+    cb(context);
+  },
+  error: (sessionid, msg) => {
+    console.log('Oops, I don\'t know what to do.');
+  },
+};
+
 
 
 var bodyParser = require('body-parser');
