@@ -1,14 +1,15 @@
-//'use strict';
 
-const fb_token = "CAAIsNqBHnnkBAPzfc9krR6V6ZB0X81ZCr56nLakZAOD3wyTpTMhYBLZA7XePyMxRG8O3laI1DCuPkrGcSdWzzq3VZCGvzynBGQIUiAxk1Bpcp1z5jC0J4XmH2CwhnNaTZAYZCeXvZABFsZCSZAzZBv0rDT8sFBONYHFezZBeDsynLBbGebr9zRaxPrAKXPCVDZCYkDVlNjRJclAiiHQZDZD";
-const wit_token = "MD3ZNDB5MEGX7KLS7Y24FGQBJXBOFQWO";
-const Wit = require('node-wit').Wit;
-const Logger = require('node-wit').Logger;
-const levels = require('node-wit').logLevels;
-const logger = new Logger(levels.DEBUG);
-var context = {};
-var sessions = {};
+var token = "CAAIsNqBHnnkBAPzfc9krR6V6ZB0X81ZCr56nLakZAOD3wyTpTMhYBLZA7XePyMxRG8O3laI1DCuPkrGcSdWzzq3VZCGvzynBGQIUiAxk1Bpcp1z5jC0J4XmH2CwhnNaTZAYZCeXvZABFsZCSZAzZBv0rDT8sFBONYHFezZBeDsynLBbGebr9zRaxPrAKXPCVDZCYkDVlNjRJclAiiHQZDZD";
+var wit = require('node-wit');
 
+var ACCESS_TOKEN = "MD3ZNDB5MEGX7KLS7Y24FGQBJXBOFQWO";
+
+
+wit.captureTextIntent(ACCESS_TOKEN, "Book the conference room for tomorrow 10 	am", function (err, res) {
+    console.log("Response from Wit for text input: ");
+    if (err) console.log("Error: ", err);
+    console.log(JSON.stringify(res, null, " "));
+});
 
 var bodyParser = require('body-parser');
 var express = require('express');
@@ -52,16 +53,12 @@ app.post('/bot/facebook', function(req, res) {
     if (event.message && event.message.text) {
       text = event.message.text;
       
-     	// console.log(text);
-
-	
-	//respondToUser(sender, res);
-
+     	console.log(text);
 
       	// Handle a text message from this sender
     	// respondToUser(sender, "Text received, echo: "+ text.substring(0, 200));
 
-     
+      respondToUser(sender, 'you said ' + text);
     }
   }
 
@@ -86,7 +83,7 @@ function respondToUser(sender, msg) {
   }
   request({
     url: 'https://graph.facebook.com/v2.6/me/messages',
-    qs: {access_token:fb_token},
+    qs: {access_token:token},
     method: 'POST',
     json: {
       recipient: {id:sender},
@@ -100,10 +97,6 @@ function respondToUser(sender, msg) {
     }
   });
 }
-
-
-//const client = new Wit(wit_token, actions);
-
 app.listen();
 
 
