@@ -49,16 +49,18 @@ app.post('/bot/facebook', function(req, res) {
       
      	console.log(text);
 
-     	response = wit.captureTextIntent(ACCESS_TOKEN, text, function (err, res) {
+      wit.captureTextIntent(ACCESS_TOKEN, text, function (err, res) {
     //console.log("Response from Wit for text input: ");
-    if (err) console.log("Error: ", err);
-    c//onsole.log(JSON.stringify(res, null, " "));
+   // if (err) console.log("Error: ", err);
+    //console.log(JSON.stringify(res, null, " "));
+	respondToUser(sender, res);
+
 });
 
       	// Handle a text message from this sender
     	// respondToUser(sender, "Text received, echo: "+ text.substring(0, 200));
 
-      respondToUser(sender, response);
+      
     }
   }
 
