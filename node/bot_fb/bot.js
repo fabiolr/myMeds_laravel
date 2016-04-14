@@ -1,5 +1,8 @@
 
 var token = "CAAIsNqBHnnkBAPzfc9krR6V6ZB0X81ZCr56nLakZAOD3wyTpTMhYBLZA7XePyMxRG8O3laI1DCuPkrGcSdWzzq3VZCGvzynBGQIUiAxk1Bpcp1z5jC0J4XmH2CwhnNaTZAYZCeXvZABFsZCSZAzZBv0rDT8sFBONYHFezZBeDsynLBbGebr9zRaxPrAKXPCVDZCYkDVlNjRJclAiiHQZDZD";
+var wit = require('node-wit');
+var ACCESS_TOKEN = "MD3ZNDB5MEGX7KLS7Y24FGQBJXBOFQWO";
+
 
 
 var bodyParser = require('body-parser');
@@ -46,10 +49,16 @@ app.post('/bot/facebook', function(req, res) {
       
      	console.log(text);
 
-      	// Handle a text message from this sender
-    	// sendTextMessage(sender, "Text received, echo: "+ text.substring(0, 200));
+     	response = wit.captureTextIntent(ACCESS_TOKEN, text, function (err, res) {
+    //console.log("Response from Wit for text input: ");
+    if (err) console.log("Error: ", err);
+    c//onsole.log(JSON.stringify(res, null, " "));
+});
 
-      sendTextMessage(sender, 'you said ' + text);
+      	// Handle a text message from this sender
+    	// respondToUser(sender, "Text received, echo: "+ text.substring(0, 200));
+
+      respondToUser(sender, response);
     }
   }
 
@@ -65,7 +74,7 @@ app.post('/bot/facebook', function(req, res) {
 // });
 
 
-function sendTextMessage(sender, msg) {
+function respondToUser(sender, msg) {
 
 	  console.log('sending ' + msg);
 
