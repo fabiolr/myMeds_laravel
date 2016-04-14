@@ -47,20 +47,26 @@ app.post('/bot/facebook', function(req, res) {
     if (event.message && event.message.text) {
       text = event.message.text;
       
-     	console.log(text);
+     	// console.log(text);
 
-      wit.captureTextIntent(ACCESS_TOKEN, text, function (err, res) {
-    //console.log("Response from Wit for text input: ");
-   // if (err) console.log("Error: ", err);
-    //console.log(JSON.stringify(res, null, " "));
-	respondToUser(sender, res);
+	client.message(text, (error, data) => {
+  if (error) {
+    console.log('Oops! Got an error: ' + error);
+  } else {
+    console.log('Yay, got Wit.ai response: ' + JSON.stringify(data));
+  }
+});
+
+
+
+	//respondToUser(sender, res);
 
 });
 
       	// Handle a text message from this sender
     	// respondToUser(sender, "Text received, echo: "+ text.substring(0, 200));
 
-      
+     
     }
   }
 
