@@ -86,4 +86,8 @@ function sendTextMessage(sender, msg) {
     }
   });
 }
+app.listen();
+
+
+
 
