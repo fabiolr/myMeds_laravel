@@ -61,7 +61,6 @@ app.post('/bot/facebook', function(req, res) {
 
 	//respondToUser(sender, res);
 
-});
 
       	// Handle a text message from this sender
     	// respondToUser(sender, "Text received, echo: "+ text.substring(0, 200));
