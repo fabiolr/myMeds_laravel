@@ -27,13 +27,14 @@ app.get('/bot/facebook', function(req, res) {
 
 app.post('/bot/facebook', function(req, res) {
   // console.log('Facebook request body:');
-  // console.log(req.body);
+
+  console.log(req.body);
 
   // Process the Facebook updates here
 
    messaging_events = req.body.entry[0].messaging;
 
-	console.log(JSON.stringify(messaging_events));
+	//console.log(JSON.stringify(messaging_events));
 
   for (i = 0; i < messaging_events.length; i++) {
     event = req.body.entry[0].messaging[i];
