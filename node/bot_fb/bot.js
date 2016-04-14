@@ -1,15 +1,6 @@
 
 var token = "CAAIsNqBHnnkBAPzfc9krR6V6ZB0X81ZCr56nLakZAOD3wyTpTMhYBLZA7XePyMxRG8O3laI1DCuPkrGcSdWzzq3VZCGvzynBGQIUiAxk1Bpcp1z5jC0J4XmH2CwhnNaTZAYZCeXvZABFsZCSZAzZBv0rDT8sFBONYHFezZBeDsynLBbGebr9zRaxPrAKXPCVDZCYkDVlNjRJclAiiHQZDZD";
-var wit = require('node-wit');
 
-var ACCESS_TOKEN = "MD3ZNDB5MEGX7KLS7Y24FGQBJXBOFQWO";
-
-
-wit.captureTextIntent(ACCESS_TOKEN, "Book the conference room for tomorrow 10 	am", function (err, res) {
-    console.log("Response from Wit for text input: ");
-    if (err) console.log("Error: ", err);
-    console.log(JSON.stringify(res, null, " "));
-});
 
 var bodyParser = require('body-parser');
 var express = require('express');
