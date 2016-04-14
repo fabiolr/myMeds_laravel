@@ -65,7 +65,7 @@ app.post('/bot/facebook', function(req, res) {
 
 function sendTextMessage(sender, msg) {
 
-	  console.log();
+	  console.log('sending ' + msg);
 
   messageData = {
     text:msg
