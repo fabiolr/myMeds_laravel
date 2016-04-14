@@ -5,6 +5,8 @@ const Wit = require('node-wit').Wit;
 const Logger = require('node-wit').Logger;
 const levels = require('node-wit').logLevels;
 const logger = new Logger(levels.DEBUG);
+const client = new Wit(wit_token, actions);
+
 var context = {};
 var sessions = {};
 
@@ -80,7 +82,6 @@ var app = express();
   }
 });
 
-const client = new Wit(wit_token, actions);
 
 
 
