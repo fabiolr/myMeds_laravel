@@ -16,10 +16,10 @@ app.get('/bot/facebook', function(req, res) {
   console.log(req);
 
   if (
-    req.param('hub.mode') == 'subscribe' &&
-    req.param('hub.verify_token') == 'fhnjfdshf89yr3jldkejy3ecejfy32ondkfh03'
+    req.params('hub.mode') == 'subscribe' &&
+    req.params('hub.verify_token') == 'fhnjfdshf89yr3jldkejy3ecejfy32ondkfh03'
     ) {
-    res.send(req.param('hub.challenge'));
+    res.send(req.params('hub.challenge'));
   } else {
     res.sendStatus(400);
   }
@@ -49,7 +49,7 @@ app.post('/bot/facebook', function(req, res) {
       	// Handle a text message from this sender
     	// sendTextMessage(sender, "Text received, echo: "+ text.substring(0, 200));
 
-      sendTextMessage(sender, 'responding');
+      sendTextMessage(sender, 'you said ' + text);
     }
   }
 
