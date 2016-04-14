@@ -42,13 +42,13 @@ app.post('/bot/facebook', function(req, res) {
     if (event.message && event.message.text) {
       text = event.message.text;
       
-     	// console.log(text);
+     	console.log(text);
 
       // Handle a text message from this sender
 
 
     //  sendTextMessage(sender, "Text received, echo: "+ text.substring(0, 200));
-      sendTextMessage(sender, "Text received");
+      //sendTextMessage(sender, "Text received");
 
     }
 
@@ -67,6 +67,9 @@ app.post('/bot/facebook', function(req, res) {
 
 
 function sendTextMessage(sender, text) {
+
+	  console.log("sending ");
+
   messageData = {
     text:text
   }
@@ -85,6 +88,5 @@ function sendTextMessage(sender, text) {
       console.log('Error: ', response.body.error);
     }
   });
-  console.log("sent ");
 }
 
