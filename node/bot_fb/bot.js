@@ -33,7 +33,7 @@ app.post('/bot/facebook', function(req, res) {
 
    messaging_events = req.body.entry[0].messaging;
 
-	console.log(JSON.stringify(messaging_events));
+	//console.log(JSON.stringify(messaging_events));
 
   for (i = 0; i < messaging_events.length; i++) {
     event = req.body.entry[0].messaging[i];
