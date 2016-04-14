@@ -66,5 +66,5 @@ const actions = {
 
 
 
-const client = new Wit(token, actions);
+const client = new Wit(wit_token, actions);
 client.interactive();
