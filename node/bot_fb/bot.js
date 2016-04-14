@@ -167,7 +167,9 @@ function respondToUser(sender, msg) {
     }
   });
 }
-const client = new Wit(wit_token, actions);
+
+
+//const client = new Wit(wit_token, actions);
 
 app.listen();
 
