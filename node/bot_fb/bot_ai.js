@@ -5,7 +5,7 @@
 
 // When not cloning the `node-wit` repo, replace the `require` like so:
 // const Wit = require('node-wit').Wit;
-const Wit = require('../').Wit;
+const Wit = require('node-wit').Wit;
 
 const token = (() => {
   if (process.argv.length !== 3) {
