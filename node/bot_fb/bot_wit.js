@@ -139,7 +139,7 @@ app.post('/bot/facebook', function(req, res) {
     if (event.message && event.message.text) {
       msg = event.message.text;
       
-      console.log(text);
+      console.log("received message from facebook: " + msg);
 
             wit.runActions(
             sessionId, // the user's current session
