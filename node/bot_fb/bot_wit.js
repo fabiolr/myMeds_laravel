@@ -9,6 +9,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
 var app = express();
+var sender;
 
 // used for wit
 var request = require('request');
@@ -135,7 +136,8 @@ app.post('/bot/facebook', function(req, res) {
   for (i = 0; i < messaging_events.length; i++) {
     event = req.body.entry[0].messaging[i];
     sender = event.sender.id;
-    
+    const sessionId = findOrCreateSession(sender);
+
     if (event.message && event.message.text) {
       msg = event.message.text;
       
