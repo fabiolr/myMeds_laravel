@@ -143,7 +143,7 @@ app.post('/bot/facebook', function(req, res) {
       
       console.log("received message from facebook: " + msg);
 
-            Wit.runActions(
+            client.runActions(
             sessionId, // the user's current session
             msg, // the user's message 
             sessions[sessionId].context, // the user's current session state
