@@ -43,37 +43,37 @@ const findOrCreateSession = (fbid) => {
 // WIT ACTIONS //
 
 const actions = {
-  //   say: (sessionId, message, cb) => {
-  //   // Our bot has something to say!
-  //   // Let's retrieve the Facebook user whose session belongs to
-  //   const recipientId = sessions[sessionId].fbid;
-  //   if (recipientId) {
-  //     // Yay, we found our recipient!
-  //     // Let's forward our bot response to her.
-  //     // respondToUser(sender, 'you said ' + text);
-  //     respondToUser(recipientId, message, (err, data) => {
-  //       if (err) {
-  //         console.log(
-  //           'Oops! An error occurred while forwarding the response to',
-  //           recipientId,
-  //           ':',
-  //           err
-  //         );
-  //       }
+    say: (sessionId, message, cb) => {
+    // Our bot has something to say!
+    // Let's retrieve the Facebook user whose session belongs to
+    const recipientId = sessions[sessionId].fbid;
+    if (recipientId) {
+      // Yay, we found our recipient!
+      // Let's forward our bot response to her.
+      // respondToUser(sender, 'you said ' + text);
+      respondToUser(recipientId, message, (err, data) => {
+        if (err) {
+          console.log(
+            'Oops! An error occurred while forwarding the response to',
+            recipientId,
+            ':',
+            err
+          );
+        }
 
-  //       // Let's give the wheel back to our bot
-  //       cb();
-  //     });
-  //   } else {
-  //     console.log('Oops! Couldn\'t find user for session:', sessionId);
-  //     // Giving the wheel back to our bot
-  //     cb();
-  //   }
-  // },
-    say: (sessionId, msg, cb) => {
-    console.log("wit bot responded: " + msg);
-    cb();
+        // Let's give the wheel back to our bot
+        cb();
+      });
+    } else {
+      console.log('Oops! Couldn\'t find user for session:', sessionId);
+      // Giving the wheel back to our bot
+      cb();
+    }
   },
+  //   say: (sessionId, msg, cb) => {
+  //   console.log("wit bot responded: " + msg);
+  //   cb();
+  // },
   merge: (context, entities, cb) => {
     cb(context);
   },
