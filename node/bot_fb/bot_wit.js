@@ -137,7 +137,7 @@ app.post('/bot/facebook', function(req, res) {
       
       console.log(text);
 
-          client.message('text, (error, data) => {
+          client.message(text, (error, data) => {
               if (error) {
               console.log('Oops! Got an error: ' + error);
                } else {
