@@ -70,7 +70,7 @@ const actions = {
   //   }
   // },
     say: (sessionId, msg, cb) => {
-    console.log("bot responded " + msg);
+    console.log("wit bot responded: " + msg);
     cb();
   },
   merge: (context, entities, cb) => {
@@ -137,17 +137,35 @@ app.post('/bot/facebook', function(req, res) {
     sender = event.sender.id;
     
     if (event.message && event.message.text) {
-      text = event.message.text;
+      msg = event.message.text;
       
       console.log(text);
 
-          client.message(text, (error, data) => {
+            wit.runActions(
+            sessionId, // the user's current session
+            msg, // the user's message 
+            sessions[sessionId].context, // the user's current session state
+            (error, context) => {
               if (error) {
-              console.log('Oops! Got an error: ' + error);
-               } else {
-             console.log('Yay, got Wit.ai response: ' + JSON.stringify(data));
+                console.log('Oops! Got an error from Wit:', error);
+              } else {
+                // Our bot did everything it has to do.
+                // Now it's waiting for further messages to proceed.
+                console.log('Waiting for futher messages.');
+
+                // Based on the session state, you might want to reset the session.
+                // This depends heavily on the business logic of your bot.
+                // Example:
+                // if (context['done']) {
+                //   delete sessions[sessionId];
+                // }
+
+                // Updating the user's current session state
+                sessions[sessionId].context = context;
+              }
             }
-        });
+          );
+
   
       //    parrot mode:
       //  respondToUser(sender, 'you said ' + text);
