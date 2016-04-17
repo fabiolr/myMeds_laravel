@@ -183,7 +183,7 @@ app.post('/bot/facebook', function(req, res) {
 
 // function to responde to user on facebook
 
-function respondToUser(sender, msg, cb) {
+function respondToUser(sender, msg) {
 
     console.log('sending ' + msg);
 
@@ -205,10 +205,7 @@ function respondToUser(sender, msg, cb) {
       console.log('Error: ', response.body.error);
     }
   });
-  return cb();
 }
-
-
 app.listen();
 
 // wit method to deal with message
