@@ -47,7 +47,7 @@ class JsonController extends Controller
 		public function searchMed(Request $request) {
 		    
 			
-			$med = Med::with('uses')->where('name', $request->med_name)->first();
+			$med = Med::with('uses')->where('name', 'like', '%'.$request->med_name.'%')->first();
 
 			return $med;
 
