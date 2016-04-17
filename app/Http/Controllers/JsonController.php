@@ -42,6 +42,15 @@ class JsonController extends Controller
 		    $med = $med->create($request->all());
 			return $med->id;
 
+		}		
+
+		public function searchMed(Request $request) {
+		    
+			
+			$med = Med::table('meds')->where('name', $request->med_name)->first();
+
+			return $med;
+
 		}
 
 
