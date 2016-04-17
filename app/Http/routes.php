@@ -20,6 +20,7 @@ Route::get('about', 'HomeController@about');
 Route::get('json/meds', 'JsonController@allMeds');
 Route::get('json/types', 'JsonController@allTypes');
 Route::get('json/type/add', 'JsonController@addType');
+Route::get('json/search/{med_name}', 'JsonController@searchMed');
 Route::get('json/med/add', 'JsonController@addMed');
 Route::get('medbot', 'BotController@bot');
 Route::get('medbot/callback', 'BotController@callback');
