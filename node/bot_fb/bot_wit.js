@@ -89,6 +89,9 @@ const actions = {
                 data = body;
                 context.selected = JSON.parse(body).contents.quotes[0].quote;
                 return cb(context);
+                } else {
+                  console.log('got an error from the quote api');
+                  return cb(error);
                 }
       })
   },
