@@ -42,12 +42,19 @@ const actions = {
   'getUse': (context, cb) => {
      
      if (context.drug) {
-      console.log('drug is: ' + context.drug);
+      console.log('getting the use for: ' + context.drug);
 
      request('https://mymeds.miami/json/search/' + context.drug, function (error, response, body) {
               if (!error && response.statusCode == 200) {
-                context.use = JSON.parse(body).uses[0].use;
-                console.log(context.use)
+                console.log('i got this from the mymeds server: ' + body)
+                  try {
+                    context.use = JSON.parse(body).uses[0].use;
+                    console.log('then I parsed and got this use: ' + context.use)
+                  } catch(error) {
+                    console.log("i can't make sense of what the mymeds server replied, if he replied at all");
+                    return cb(error);
+                  }
+                
                 //context.use = 'something';
                 return cb(context);
                 }
