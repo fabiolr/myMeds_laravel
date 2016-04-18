@@ -86,11 +86,6 @@ const actions = {
   error: (sessionid, msg) => {
     console.log('Oops, I don\'t know what to do.');
   },
-  'getUse': (context, cb) => {
-    console.log(context.drug);
-    context.use = "headache";
-    cb(context);
-  },  
   'getQuote': (context, cb) => {
           
      request('http://quotes.rest/qod.json?category=inspire', function (error, response, body) {
@@ -149,8 +144,6 @@ app.get('/bot/facebook', function(req, res) {
 
 app.post('/bot/facebook', function(req, res) {
   // console.log('Facebook request body:');
-
-  console.log(req.body);
 
   // Process the Facebook updates here
 
