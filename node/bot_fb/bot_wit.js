@@ -15,6 +15,7 @@ var sender;
 // used for wit
 var request = require('request');
 const Wit = require('node-wit').Wit;
+const context = {};
 
 // fb sessions
 
@@ -74,6 +75,12 @@ const actions = {
   //   cb();
   // },
   merge: (context, entities, cb) => {
+    const drug = firstEntityValue(entities, 'drug');
+    if (drug) {
+      context.drug = drug;
+      console.log('the context is: ' + context.drug);
+
+    }
     cb(context);
   },
   error: (sessionid, msg) => {
