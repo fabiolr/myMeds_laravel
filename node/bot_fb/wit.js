@@ -27,7 +27,7 @@ const actions = {
     cb(context);
   },
   error: (sessionid, msg) => {
-    console.log('Oops, I don\'t know what to do.');
+    console.log('Oops, I don\'t know what to do: ' + msg);
   },
   'getQuote': (context, cb) => {
           
