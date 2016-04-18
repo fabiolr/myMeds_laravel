@@ -94,6 +94,21 @@ const actions = {
                 }
       })
   },
+    'getUse': (context, cb) => {
+     
+     if (context.drug) {
+
+     request('https://mymeds.miami/json/search/' + context.drug, function (error, response, body) {
+              if (!error && response.statusCode == 200) {
+                context.use = JSON.parse(body).uses[0].use;
+                return cb(context);
+                }
+      })
+   } else {
+    console.log('oops i dont know what drug he meant');
+
+   }
+  },
 };
 
 
@@ -206,6 +221,22 @@ function respondToUser(sender, msg, cb) {
   });
   return cb();
 }
+
+// function to get entity from what user said
+const firstEntityValue = (entities, entity) => {
+  const val = entities && entities[entity] &&
+    Array.isArray(entities[entity]) &&
+    entities[entity].length > 0 &&
+    entities[entity][0].value
+  ;
+  if (!val) {
+    return null;
+  }
+  return typeof val === 'object' ? val.value : val;
+};
+
+
+
 
 
 app.listen();

@@ -1,29 +1,34 @@
 // 'use strict';
 var request = require('request');
+require('dotenv').load();
+
 const Wit = require('../../node_modules/node-wit').Wit;
 // var http = require("http");
 // url = "http://quotes.rest/qod.json?category=inspire";
 // //url = "http://maps.googleapis.com/maps/api/directions/json?origin=3321 Crystal Court, Miami, FL&destination=2980 McFarlane Rd, Miami, FL&sensor=false&mode=walking";
 
 // const token = "MD3ZNDB5MEGX7KLS7Y24FGQBJXBOFQWO"; //meds
-const wit_token = "YTBUDDOE7QONDWDBW4PBDTHXXR3JS4BV"; //quotes
+const wit_token = process.env.WIT_TOKEN; //quotes
+const context = {};
+
+
 
 const actions = {
   say: (sessionId, msg, cb) => {
-    console.log(msg);
     cb();
   },
   merge: (context, entities, cb) => {
+    const drug = firstEntityValue(entities, 'drug');
+    if (drug) {
+      context.drug = drug;
+      console.log('the context is: ' + context.drug);
+
+    }
     cb(context);
   },
   error: (sessionid, msg) => {
     console.log('Oops, I don\'t know what to do.');
   },
-  'getUse': (context, cb) => {
-    console.log(context.drug);
-    context.use = "headache";
-    cb(context);
-  },  
   'getQuote': (context, cb) => {
           
      request('http://quotes.rest/qod.json?category=inspire', function (error, response, body) {
@@ -34,20 +39,47 @@ const actions = {
                 }
       })
   },
+  'getUse': (context, cb) => {
+     
+     if (context.drug) {
+      console.log('drug is: ' + context.drug);
+
+     request('https://mymeds.miami/json/search/' + context.drug, function (error, response, body) {
+              if (!error && response.statusCode == 200) {
+                context.use = JSON.parse(body).uses[0].use;
+                console.log(context.use)
+                //context.use = 'something';
+                return cb(context);
+                }
+      })
+   } else {
+    console.log('oops i dont know what drug he meant');
+
+   }
+  },
 };
 
 
-const client = new Wit(wit_token, actions);
-// client.interactive();
-
-
-client.message('get me a quote', (error, data) => {
-  if (error) {
-    console.log('Oops! Got an error: ' + error);
-  } else {
-    console.log('Yay, got Wit.ai response: ' + JSON.stringify(data));
+const firstEntityValue = (entities, entity) => {
+  const val = entities && entities[entity] &&
+    Array.isArray(entities[entity]) &&
+    entities[entity].length > 0 &&
+    entities[entity][0].value
+  ;
+  if (!val) {
+    return null;
   }
-});
-  
+  return typeof val === 'object' ? val.value : val;
+};
+
+
+
+
+
+const client = new Wit(wit_token, actions);
+client.interactive();
+
+
+
 
 
