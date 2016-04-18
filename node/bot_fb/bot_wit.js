@@ -70,10 +70,6 @@ const actions = {
       cb();
     }
   },
-  //   say: (sessionId, msg, cb) => {
-  //   console.log("wit bot responded: " + msg);
-  //   cb();
-  // },
   merge: (context, entities, cb) => {
     const drug = firstEntityValue(entities, 'drug');
     if (drug) {
