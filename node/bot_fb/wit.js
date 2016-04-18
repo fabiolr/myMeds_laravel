@@ -9,7 +9,7 @@ const Wit = require('../../node_modules/node-wit').Wit;
 
 // const token = "MD3ZNDB5MEGX7KLS7Y24FGQBJXBOFQWO"; //meds
 const wit_token = process.env.WIT_TOKEN; //quotes
-const context = {};
+//const context = {};
 
 
 
@@ -54,7 +54,7 @@ const actions = {
       })
    } else {
     console.log('oops i dont know what drug he meant');
-
+    return cb('error');
    }
   },
 };
