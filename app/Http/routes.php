@@ -52,13 +52,15 @@ Route::group(['middleware' => 'web'], function () {
 	Route::post('meds/newtype', 'MedsController@newType'); 
 	Route::post('meds/newuse', 'MedsController@newUse'); 
 	Route::get('uses', 'MedsController@uses'); 
-
+    Route::get('friends', 'FriendsController@index');
+    Route::get('friends/{friend}', 'FriendsController@show');
 
 	Route::get('mymeds', 'MyMedsController@index');
 	Route::get('plus/{mymed}', 'MyMedsController@plus'); 
 	Route::get('minus/{mymed}', 'MyMedsController@minus'); 
 	Route::get('meds/{med}/add', 'MyMedsController@addMyMeds'); 
 	Route::post('meds/{med}', 'MyMedsController@storeMyMeds'); 
+
 
 
 });

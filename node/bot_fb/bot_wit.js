@@ -1,7 +1,6 @@
 
 require('dotenv').load();
 
-
 // used for aeverything
 var express = require('express');
 
@@ -244,10 +243,6 @@ const firstEntityValue = (entities, entity) => {
   }
   return typeof val === 'object' ? val.value : val;
 };
-
-
-
-
 
 app.listen();
 

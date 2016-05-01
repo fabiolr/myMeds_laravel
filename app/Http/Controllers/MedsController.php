@@ -19,8 +19,7 @@ class MedsController extends Controller
 
 			$meds = Med::all();
 			$types = Type::all();
-			$active = "meds";
-			return view('meds.meds', compact('meds'), compact('types'), compact('active'));  
+			return view('meds.meds', compact('meds'), compact('types'));  
 
 		}
 

@@ -19,7 +19,7 @@
             <li {{ Request::path() == 'meds' ? ' class=active' : '' }}><a href="/meds">Meds</a></li>
             <li {{ Request::path() == 'mymeds' ? ' class=active' : '' }}><a href="/mymeds">My Meds</a></li>
             <li {{ Request::path() == 'uses' ? ' class=active' : '' }}><a href="/uses">Uses</a></li>
-            <li {{ Request::path() == 'friends' ? ' class=active' : '' }}><a href="#">Friends</a></li>
+            <li {{ Request::path() == 'friends' ? ' class=active' : '' }}><a href="/friends">Friends</a></li>
             <li {{ Request::path() == 'search' ? ' class=active' : '' }}><a href="#">Search</a></li>
             <li {{ Request::path() == 'logout' ? ' class=active' : '' }}><a href="/logout">Logout</a></li>
           </ul>

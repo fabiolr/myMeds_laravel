@@ -26,15 +26,29 @@ class User extends Authenticatable
 
         public function meds() {
 
-         return $this->belongsToMany(Med::class)->withPivot('expiration','qty','id');;
+            return $this->belongsToMany(Med::class)->withPivot('expiration','qty','id');;
 
         }
 
         public function uses() {
 
-        return $this->hasMany(MedUse::class);
+            return $this->hasMany(MedUse::class);
 
         }
+
+        public function friends() {
+    
+            return $this->hasManyThrough('App\User', 'App\Friendship', 'friend_id', 'id');
+    
+            }
+
+
+        public function friendships() {
+    
+            return $this->hasMany(Friendship::class);
+    
+            }
+
 
 }
 
