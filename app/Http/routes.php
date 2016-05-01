@@ -54,6 +54,7 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('uses', 'MedsController@uses'); 
     Route::get('friends', 'FriendsController@index');
     Route::get('friends/{friend}', 'FriendsController@show');
+	Route::get('search', 'SearchController@results');
 
 	Route::get('mymeds', 'MyMedsController@index');
 	Route::get('plus/{mymed}', 'MyMedsController@plus'); 

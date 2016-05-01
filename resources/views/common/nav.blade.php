@@ -23,6 +23,12 @@
             <li {{ Request::path() == 'search' ? ' class=active' : '' }}><a href="#">Search</a></li>
             <li {{ Request::path() == 'logout' ? ' class=active' : '' }}><a href="/logout">Logout</a></li>
           </ul>
+          <form action="/search" class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+             <input name="q" type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Go</button>
+          </form>
           <p class="navbar-text navbar-right"><a href="#" class="navbar-link">{{ Auth::user()->name }}</a></p>
 
         </div><!--/.nav-collapse -->
