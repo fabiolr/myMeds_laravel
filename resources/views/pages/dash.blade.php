@@ -8,7 +8,27 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="badge">14</span>
+                            Total Meds
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">14</span>
+                            My Meds
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <span class="badge">14</span>
+                            Friends
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <span class="badge">14</span>
+                            Friend Requests Pending
+                        </li>
+                       
+                    </ul>
                 </div>
             </div>
         </div>

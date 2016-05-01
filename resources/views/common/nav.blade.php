@@ -21,7 +21,9 @@
             <li {{ Request::path() == 'uses' ? ' class=active' : '' }}><a href="/uses">Uses</a></li>
             <li {{ Request::path() == 'friends' ? ' class=active' : '' }}><a href="/friends">Friends</a></li>
             <li {{ Request::path() == 'search' ? ' class=active' : '' }}><a href="#">Search</a></li>
-            <li {{ Request::path() == 'logout' ? ' class=active' : '' }}><a href="/logout">Logout</a></li>
+         
+
+
           </ul>
           <form action="/search" class="navbar-form navbar-left" role="search">
             <div class="form-group">
@@ -29,7 +31,7 @@
             </div>
             <button type="submit" class="btn btn-default">Go</button>
           </form>
-          <p class="navbar-text navbar-right"><a href="#" class="navbar-link">{{ Auth::user()->name }}</a></p>
+          <div class="navbar-text navbar-right"><a href="#" class="navbar-link">{{ Auth::user()->name }}</a>   <a class="navbar-link" href="/logout"><span class="glyphicon glyphicon glyphicon-log-out" aria-hidden="true"></span></a></di>
 
         </div><!--/.nav-collapse -->
 

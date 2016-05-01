@@ -31,7 +31,7 @@
               	@foreach ($friends as $friend)
 
               	<tr>
-                  <td><a href="/friends/{{ $friend->friend_id }}">{{ $friend->who["name"] }}</a></td>
+                  <td><a href="/friend/{{ $friend->friend_id }}">{{ $friend->who["name"] }}</a></td>
                   <td>{{ $friend->who["email"] }}</td>
 					       <td> {{ $friend["medcount"] }} </td>
               		
