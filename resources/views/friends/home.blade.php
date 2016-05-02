@@ -11,13 +11,11 @@
 
 
 
-
 <div class="table-responsive">
 
             <table class="table table-striped">
               <thead>
                 <tr>
-					
                 </tr>
                 <tr>
                   <th>Friend</th>
@@ -30,7 +28,7 @@
               
               	@foreach ($friends as $friend)
 
-              	<tr>
+              	<tr> 
                   <td><a href="/friend/{{ $friend->friend_id }}">{{ $friend->who["name"] }}</a></td>
                   <td>{{ $friend->who["email"] }}</td>
 					       <td> {{ $friend["medcount"] }} </td>

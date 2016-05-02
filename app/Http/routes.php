@@ -52,7 +52,7 @@ Route::group(['middleware' => 'web'], function () {
 	Route::post('meds/newtype', 'MedsController@newType'); 
 	Route::post('meds/newuse', 'MedsController@newUse'); 
 	Route::get('uses', 'MedsController@uses'); 
-    Route::get('friends', 'FriendsController@index');
+    Route::get('friends', 'FriendsController@index')->name('friends');
     Route::get('friend/{friend}', 'FriendsController@show');
     Route::get('friend/{friend}/add', 'FriendsController@addFriend');
 	Route::get('search', 'SearchController@results');

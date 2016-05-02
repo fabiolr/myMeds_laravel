@@ -10,23 +10,40 @@
                 <div class="panel-body">
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <span class="badge">14</span>
+                            <span class="badge">{{ $dash->medc }}</span>
                             Total Meds
                         </li>
                         <li class="list-group-item">
-                            <span class="badge">14</span>
+                            <span class="badge">{{ $dash->mymedc }}</span>
                             My Meds
                         </li>
                         
                         <li class="list-group-item">
-                            <span class="badge">14</span>
+                            <span class="badge">{{ count($dash->friends) }}</span>
                             Friends
                         </li>
                         
-                        <li class="list-group-item">
-                            <span class="badge">14</span>
-                            Friend Requests Pending
-                        </li>
+                
+                       
+                    </ul>
+
+                   <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="collapseListGroupHeading1"> 
+                        <h6 class="panel-title"> <a class="" role="button" data-toggle="collapse" href="#collapseListGroup1" aria-expanded="true" aria-controls="collapseListGroup1"> Pending Friend Requests </a><span style="float:right" class="badge">{{ count($dash->unsansweredRequests) }}</span> </h6> 
+                    </div> 
+                    <div id="collapseListGroup1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading1" aria-expanded="true"> 
+                        <ul class="list-group"> 
+                            
+                        @foreach ($dash->unsansweredRequests as $uar)
+                        
+                            <a class="list-group-item" href="/friend/{{ $uar->user->id }}">{{ $uar->user->name }}</a>
+
+                        @endforeach
+
+                        </ul> 
+                        <div class="panel-footer">Footer</div> 
+                        </div> 
+                    </div>
                        
                     </ul>
                 </div>

@@ -9,6 +9,8 @@ use Auth;
 use App\User;
 use App\Friendship;
 use DateTime;
+use Mail;
+
 
 class FriendsController extends Controller 	{
     
@@ -108,18 +110,27 @@ class FriendsController extends Controller 	{
 							// this is still a one-way relationship, so treat as a request.
 
 							// Add action to send e-mail to user with id $friend_id
+							Mail::send('emails.request', ['user' => $user], function ($m) use ($user) {
+            				$m->from($user->email, $user->name);
+            				$m->to($friend->email, $friend->name)->subject('Please Add me on MyMeds.miami!');
+       						 });
 
-						$friend->action = 'Friendship Request Sent';
-						dd($friend->action);
+							//
+						$friend->action = 'Friendship Request Sent to '.$friend->name;
+						$friend->level = 'success';
+						return view('friends.home',compact('friend'));
+
 
 						} else {
 
 							// the other side has aready sent a request, so this has now become a friendship.
 
 
-						$friend->action = 'Your are now Friends';
-						dd($friend->action);
+						$friend->action = 'Your are now Friends with '. $friend->name. ' and can see his Meds';
+						$friend->level = 'success';
 
+						return redirect('/friends')->with('data',['success','You are now Friends']);
+						
 
 					}
 
@@ -130,16 +141,19 @@ class FriendsController extends Controller 	{
 						// it seems like the other side still hasn't accepted you
 
 							// maybe send a reminder email?
-						$friend->action = 'Your already requested this friendship, still waiting for a response.';
-						dd($friend->action);
+						$friend->action = 'Your already requested, still waiting for a response from '.$friend->name;
+						$friend->level = 'warning';
+						dd($friends);
+						return view('friends.home',compact('friend'));
 
 
 					} else {
 
 						// it seems you are already friends, how the hell did you click on add friend...?
 
-						$friend->action = 'Your are already friends.';
-						dd($friend->action);
+						$friend->action = 'Your are already friends with '.$friend->name;
+						$friend->level = 'sucess';
+						return view('friends.home',compact('friend'));
 
 					}
 				}
