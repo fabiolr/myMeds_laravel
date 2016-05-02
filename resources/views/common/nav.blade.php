@@ -20,18 +20,21 @@
             <li {{ Request::path() == 'mymeds' ? ' class=active' : '' }}><a href="/mymeds">My Meds</a></li>
             <li {{ Request::path() == 'uses' ? ' class=active' : '' }}><a href="/uses">Uses</a></li>
             <li {{ Request::path() == 'friends' ? ' class=active' : '' }}><a href="/friends">Friends</a></li>
-            <li {{ Request::path() == 'search' ? ' class=active' : '' }}><a href="#">Search</a></li>
-         
+<!--             <li {{ Request::path() == 'search' ? ' class=active' : '' }}><a href="#">Search</a></li>
+ -->         
 
 
           </ul>
+
           <form action="/search" class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-             <input name="q" type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default">Go</button>
+              <div class="input-group input-group-sm">
+                <input name="q" type="text" class="form-control input-group-sm" placeholder="Search...">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit">Go!</button>
+                </span>
+              </div>
           </form>
-          <div class="navbar-text navbar-right"><a href="#" class="navbar-link">{{ Auth::user()->name }}</a>   <a class="navbar-link" href="/logout"><span class="glyphicon glyphicon glyphicon-log-out" aria-hidden="true"></span></a></di>
+          <div class="navbar-text navbar-right"><a href="#" class="navbar-link">{{ Auth::user()->name }}</a>  |  <a class="navbar-link" href="/logout"><span class="glyphicon glyphicon glyphicon-log-out" aria-hidden="true"></span></a></di>
 
         </div><!--/.nav-collapse -->
 

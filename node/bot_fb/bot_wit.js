@@ -247,7 +247,8 @@ const firstEntityValue = (entities, entity) => {
 app.listen();
 
 // wit method to deal with message
-const client = new Wit(process.env.WIT_TOKEN, actions);
+//const client = new Wit(process.env.WIT_TOKEN, actions);
+const client = new Wit("VRECX42SGUURWEVE5HWQG6EZL3HV5UB3", actions);
 
 
 
