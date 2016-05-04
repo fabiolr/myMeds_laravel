@@ -11,16 +11,16 @@
                     <ul class="list-group">
                         <li class="list-group-item">
                             <span class="badge">{{ $dash->medc }}</span>
-                            Total Meds
+                           <a href="/meds">System Meds</a> 
                         </li>
                         <li class="list-group-item">
                             <span class="badge">{{ $dash->mymedc }}</span>
-                            My Meds
+                            <a href="/mymeds">My Meds</a>
                         </li>
                         
                         <li class="list-group-item">
                             <span class="badge">{{ count($dash->friends) }}</span>
-                            Friends
+                            <a href="/friends">Friends</a> 
                         </li>
                         
                 
@@ -41,8 +41,7 @@
                         @endforeach
 
                         </ul> 
-                        <div class="panel-footer">Footer</div> 
-                        </div> 
+                
                     </div>
                        
                     </ul>
