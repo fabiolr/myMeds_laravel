@@ -248,7 +248,7 @@ app.listen();
 
 // wit method to deal with message
 //const client = new Wit(process.env.WIT_TOKEN, actions);
-const client = new Wit("IBWIETNJBS3AP7TJCQCIKHVEKOUFQAQK", actions);
+const client = new Wit("VRVLVALG2HWJG5CUMI2RDFE54ODAO4LB", actions);
 
 
 
