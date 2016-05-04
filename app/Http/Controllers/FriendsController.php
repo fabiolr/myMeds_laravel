@@ -109,16 +109,17 @@ class FriendsController extends Controller 	{
 					if (!$friend->beenAdded) {
 							// this is still a one-way relationship, so treat as a request.
 
-							// Add action to send e-mail to user with id $friend_id
-							Mail::send('emails.request', ['user' => $user], function ($m) use ($user) {
-            				$m->from($user->email, $user->name);
-            				$m->to($friend->email, $friend->name)->subject('Please Add me on MyMeds.miami!');
-       						 });
+							// MAIL FORM SMTP GOES TO SPAM, IMPLEMENT MAIL API WITH PROVIDER LIKE MANDRIL
+							// // Add action to send e-mail to user with id $friend_id
+							// Mail::send('emails.request', ['user' => $user], function ($m) use ($user) {
+       //      				$m->from($user->email, $user->name);
+       //      				$m->to($friend->email, $friend->name)->subject('Please Add me on MyMeds.miami!');
+       // 						 });
 
 							//
 						$friend->action = 'Friendship Request Sent to '.$friend->name;
 						$friend->level = 'success';
-						return view('friends.home',compact('friend'));
+						return view('friends.home',compact('friends'), compact('friend'));
 
 
 						} else {
