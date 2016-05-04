@@ -143,7 +143,6 @@ class FriendsController extends Controller 	{
 							// maybe send a reminder email?
 						$friend->action = 'Your already requested, still waiting for a response from '.$friend->name;
 						$friend->level = 'warning';
-						dd($friends);
 						return view('friends.home',compact('friend'));
 
 
