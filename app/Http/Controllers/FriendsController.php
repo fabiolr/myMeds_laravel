@@ -119,7 +119,8 @@ class FriendsController extends Controller 	{
 							//
 						$friend->action = 'Friendship Request Sent to '.$friend->name;
 						$friend->level = 'success';
-						return view('friends.home',compact('friends'), compact('friend'));
+						//return view('friends.home',compact('friends'), compact('friend'));
+						return redirect('/friends')->with('data',['success','Friendship Request Sent']);
 
 
 						} else {
@@ -144,7 +145,8 @@ class FriendsController extends Controller 	{
 							// maybe send a reminder email?
 						$friend->action = 'Your already requested, still waiting for a response from '.$friend->name;
 						$friend->level = 'warning';
-						return view('friends.home',compact('friends'), compact('friend'));
+						//return view('friends.home',compact('friends'), compact('friend'));
+						return redirect('/friends')->with('data',['success','Your already requested this friendship']);
 
 
 					} else {
@@ -153,7 +155,8 @@ class FriendsController extends Controller 	{
 
 						$friend->action = 'Your are already friends with '.$friend->name;
 						$friend->level = 'sucess';
-						return view('friends.home',compact('friends'), compact('friend'));
+						//return view('friends.home',compact('friends'), compact('friend'));
+						return redirect('/friends')->with('data',['success','Your already friends']);
 
 					}
 				}
