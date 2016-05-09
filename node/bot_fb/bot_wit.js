@@ -214,8 +214,7 @@ function respondToUser(sender, msg, cb) {
   }
   request({
     url: 'https://graph.facebook.com/v2.6/me/messages',
-    qs: {access_token:"CAAIsNqBHnnkBAPzfc9krR6V6ZB0X81ZCr56nLakZAOD3wyTpTMhYBLZA7XePyMxRG8O3laI1DCuPkrGcSdWzzq3VZCGvzynBGQIUiAxk1Bpcp1z5jC0J4XmH2CwhnNaTZAYZCeXvZABFsZCSZAzZBv0rDT8sFBONYHFezZBeDsynLBbGebr9zRaxPrAKXPCVDZCYkDVlNjRJclAiiHQZDZD"},
-    //qs: {access_token:process.env.FB_TOKEN},
+    qs: {access_token:process.env.FB_TOKEN},
     method: 'POST',
     json: {
       recipient: {id:sender},
@@ -247,8 +246,7 @@ const firstEntityValue = (entities, entity) => {
 app.listen();
 
 // wit method to deal with message
-//const client = new Wit(process.env.WIT_TOKEN, actions);
-const client = new Wit("VRVLVALG2HWJG5CUMI2RDFE54ODAO4LB", actions);
+const client = new Wit(process.env.WIT_TOKEN, actions);
 
 
 
